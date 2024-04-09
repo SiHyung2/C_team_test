@@ -32,8 +32,8 @@ public class RootConfig {
 	    hikariConfig.addDataSourceProperty("connectTimeout", "5000");
 	    hikariConfig.addDataSourceProperty("socketTimeout", "300000");
 	    
-	    hikariConfig.setUsername("c##madang");
-	    hikariConfig.setPassword("c##madang");
+	    hikariConfig.setUsername("c##project");
+	    hikariConfig.setPassword("c##project");
 
 	    HikariDataSource dataSource = new HikariDataSource(hikariConfig);
 
