@@ -36,7 +36,7 @@ public class RootConfig {
 	    hikariConfig.setPassword("c##project");
 
 	    HikariDataSource dataSource = new HikariDataSource(hikariConfig);
-
+ 
 	    return dataSource;
 	  }
 	 
