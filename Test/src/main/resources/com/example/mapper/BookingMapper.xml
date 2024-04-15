@@ -24,7 +24,6 @@
         payment_code = #{payment_code}, reg_date = #{reg_date} WHERE bo_num = #{bo_num}
     </update> 
     
-    
     <delete id="deleteBooking" parameterType="string">
         DELETE FROM bookings WHERE bo_num = #{bo_num}
     </delete> 
