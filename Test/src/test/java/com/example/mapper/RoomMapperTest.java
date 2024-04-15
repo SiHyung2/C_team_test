@@ -26,18 +26,44 @@ public class RoomMapperTest {
         list.forEach(room -> log.info(room));
     }
     
-    @Test
+//    @Test
     public void testInsertRoom() {
     	RoomDTO room=new RoomDTO();
-		room.setRO_NUM(3);
-		room.setAC_ID("asd123");
-		room.setRO_NAME("스탠다드");
-		room.setRO_BASIC_COUNT(2);
-		room.setRO_MAX_COUNT(4);
-		room.setRO_INFO("삽입 테스트2");
+		room.setRo_num(4);
+		room.setAc_id("asd123");
+		room.setRo_name("스탠다드");
+		room.setRo_basic_count(2);
+		room.setRo_max_count(4);
+		room.setRo_info("삽입 테스트2");
 		
 		
 		mapper.insertroom(room);
+		
+		log.info(room);
+	}
+    
+    @Test
+    public void testUpdateRoom() {
+    	RoomDTO room=new RoomDTO();
+		room.setRo_num(3);
+		room.setAc_id("asd123");
+		room.setRo_name("스탠다드_수정");
+		room.setRo_basic_count(2);
+		room.setRo_max_count(4);
+		room.setRo_info("수정 테스트2");
+		
+		
+		mapper.updateroom(room);
+		
+		log.info(room);
+	}
+    
+//    @Test
+    public void testDeleteRoom() {
+    	RoomDTO room=new RoomDTO();
+		room.setRo_num(2);
+		
+		mapper.deleteroom(room);
 		
 		log.info(room);
 	}

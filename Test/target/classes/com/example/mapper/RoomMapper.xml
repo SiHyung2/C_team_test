@@ -19,7 +19,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	</insert>
  	
 
+	<update id="updateroom">
+		update
+ 			room
+ 		set
+ 			ac_id=#{ac_id}, ro_name=#{ro_name}, ro_basic_count=#{ro_basic_count}, 
+ 			ro_max_count=#{ro_max_count}, ro_info=#{ro_info}
+ 		where
+ 			ro_num=#{ro_num}
+ 	</update>
 	
 	
-	
+	<delete id="deleteroom">
+		delete room where ro_num=#{ro_num}
+ 	</delete>
  </mapper>
