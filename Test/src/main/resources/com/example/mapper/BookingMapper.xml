@@ -22,7 +22,7 @@
         UPDATE bookings SET email_id = #{email_id}, ro_num = #{ro_num}, ac_id = #{ac_id}, 
         checkin_day = #{checkin_day}, checkout_day = #{checkout_day}, status = #{status}, 
         payment_code = #{payment_code}, reg_date = #{reg_date} WHERE bo_num = #{bo_num}
-    </update>
+    </update> 
     
     
     <delete id="deleteBooking" parameterType="string">
