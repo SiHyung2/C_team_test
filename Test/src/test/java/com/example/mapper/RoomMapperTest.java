@@ -20,7 +20,7 @@ public class RoomMapperTest {
     @Autowired
     private RoomMapper mapper;
 
-//    @Test
+    @Test
     public void testGetList() {
         List<RoomDTO> list = mapper.getList();
         list.forEach(room -> log.info(room));
@@ -42,7 +42,7 @@ public class RoomMapperTest {
 		log.info(room);
 	}
     
-    @Test
+//    @Test
     public void testUpdateRoom() {
     	RoomDTO room=new RoomDTO();
 		room.setRo_num(3);

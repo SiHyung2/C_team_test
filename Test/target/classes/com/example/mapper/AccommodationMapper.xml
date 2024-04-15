@@ -2,19 +2,18 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- 
- <mapper namespace="com.example.mapper.AccommodataionMapper">
 
- 
- 	<select id="getList" resultType="com.example.domain.AccommodationDTO">
- 		select*from Accommodation where ro_num>0
- 	</select>
- 	
+<mapper namespace="com.example.mapper.AccommodationMapper">
+
+    <select id="getList" resultType="com.example.domain.AccommodationDTO">
+        select * from Accommodation
+    </select>
+    
 	<!-- 숙소(사업체) 등록 -->
-<!--  	<insert id="insertaccommdation"> -->
-<!-- 		INSERT INTO  -->
-<!-- 		VALUES  -->
-<!--  	</insert> -->
+ 	<insert id="insertaccommdation">
+		INSERT INTO ac_id, email_id, ac_title, ac_type, ac_address, ac_info, checkin, checkout, bu_name
+		VALUES #{ac_id}, #{email_id}, #{ac_title}, #{ac_type}, #{ac_address}, #{ac_info}, #{checkin}, #{checkout}, #{bu_name}
+ 	</insert>
  	
 
 <!-- 	<update id="updateaccommdation"> -->
@@ -27,4 +26,4 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- 	<delete id="deleteaccommdation"> -->
 <!-- 		delete where  -->
 <!--  	</delete> -->
- </mapper>
+</mapper>

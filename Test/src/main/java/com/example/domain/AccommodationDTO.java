@@ -14,6 +14,5 @@ public class AccommodationDTO {
 	private String ac_info;
 	private Date checkin;
 	private Date checkout;
-	private String buname;
-	
+	private String bu_name;
 }
