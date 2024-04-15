@@ -38,7 +38,7 @@ public class RootConfig {
 	    HikariDataSource dataSource = new HikariDataSource(hikariConfig);
  
 	    return dataSource;
-	  }
+	  } 
 	 
 	 @Bean
 	 public SqlSessionFactory sqlSessionFactory() throws Exception{
