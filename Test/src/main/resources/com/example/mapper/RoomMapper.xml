@@ -7,17 +7,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
  
  	<select id="getList" resultType="com.example.domain.RoomDTO">
- 		select*from room
+ 		select*from room where ro_num>0
  	</select>
  	
- 	
- 	<select id="insertBooking" resultType="com.example.domain.RoomDTO">
- 		<![CDATA[
- 			INSERT INTO room 
- 			VALUES
- 			
- 		]]>
- 	</select>
+	<!-- 객실 등록 -->
+ 	<insert id="insertroom">
+		INSERT INTO 
+			room (ro_num, ac_id, ro_name, ro_basic_count, ro_max_count, ro_info)
+		VALUES 
+			(#{ro_num}, #{ac_id}, #{ro_name}, #{ro_basic_count}, #{ro_max_count}, #{ro_info})
+ 	</insert>
  	
 
 	

@@ -20,9 +20,25 @@ public class RoomMapperTest {
     @Autowired
     private RoomMapper mapper;
 
-    @Test
+//    @Test
     public void testGetList() {
         List<RoomDTO> list = mapper.getList();
         list.forEach(room -> log.info(room));
     }
+    
+    @Test
+    public void testInsertRoom() {
+    	RoomDTO room=new RoomDTO();
+		room.setRO_NUM(3);
+		room.setAC_ID("asd123");
+		room.setRO_NAME("스탠다드");
+		room.setRO_BASIC_COUNT(2);
+		room.setRO_MAX_COUNT(4);
+		room.setRO_INFO("삽입 테스트2");
+		
+		
+		mapper.insertroom(room);
+		
+		log.info(room);
+	}
 }

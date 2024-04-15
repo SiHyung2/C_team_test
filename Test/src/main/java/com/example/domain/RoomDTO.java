@@ -5,11 +5,11 @@ import lombok.Data;
 @Data
 public class RoomDTO {
 
-	private int RO_NUM;
-	private String AC_ID;
-	private String RO_NAME;
-	private int RO_BASIC;
-	private int RO_MAX;
-	private String RO_INFO;
+	private int ro_num;
+	private String ac_id;
+	private String ro_name;
+	private int ro_basic_count;
+	private int ro_count;
+	private String ro_info;
 	
 }
