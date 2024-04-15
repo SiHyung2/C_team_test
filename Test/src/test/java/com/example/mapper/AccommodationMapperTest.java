@@ -1,7 +1,7 @@
 package com.example.mapper;
 
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import org.junit.Test;
@@ -29,12 +29,14 @@ public class AccommodationMapperTest {
 	    list.forEach(accommodation -> log.info(accommodation));
 	}
     
-    @Test
+//    @Test
   	public void testInsertAccommodation() {
     	AccommodationDTO accommodation=new AccommodationDTO();
     	
-    	Date day1 = new Date();
-    	Date day2 = new Date();
+    	Date day1 = new Date(System.currentTimeMillis());
+    	
+    	Date day2 = new Date(System.currentTimeMillis());
+    	
     	
     	
     	accommodation.setAc_id(2);

@@ -11,10 +11,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     
 	<!-- 숙소(사업체) 등록 -->
  	<insert id="insertaccommdation">
-		INSERT INTO ac_id, email_id, ac_title, ac_type, ac_address, ac_info, checkin, checkout, bu_name
-		VALUES #{ac_id}, #{email_id}, #{ac_title}, #{ac_type}, #{ac_address}, #{ac_info}, #{checkin}, #{checkout}, #{bu_name}
+		INSERT INTO ACCOMMODATION
+			(ac_id, email_id, ac_title, ac_type, ac_address, ac_info, checkin, checkout, bu_name)
+		VALUES 
+			(#{ac_id}, #{email_id}, #{ac_title}, #{ac_type}, #{ac_address}, #{ac_info}, #{checkin}, #{checkout}, #{bu_name})
  	</insert>
- 	
 
 <!-- 	<update id="updateaccommdation"> -->
 <!-- 		update -->
