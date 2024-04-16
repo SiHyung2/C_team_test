@@ -22,12 +22,12 @@ public class BookingMapperTest {
     @Setter(onMethod_ = @Autowired)
     private BookingMapper mapper;
     
-//    @Test
+    @Test
     public void testAddBooking() {
         BookingDTO booking = new BookingDTO();
         booking.setBo_num("1003");
         booking.setEmail_id("qwe123@naver.com");
-        booking.setRo_type("온돌");
+        booking.setRo_type(1);
         booking.setAc_id(1234);
         booking.setCheckin_day("2024-04-15");
         booking.setCheckout_day("2024-04-20");
@@ -69,7 +69,7 @@ public class BookingMapperTest {
     
 //    @Test
     public void testGetAllBooking() {
-        List<BookingDTO> bookings = mapper.getAllbooking();
+        List<BookingDTO> bookings = mapper.getAllBooking();
         
         bookings.forEach(booking -> log.info(booking));
     }

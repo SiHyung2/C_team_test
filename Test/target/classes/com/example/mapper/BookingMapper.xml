@@ -5,7 +5,7 @@
 
 <mapper namespace="com.example.mapper.BookingMapper">
     
-    <select id="getBooking" parameterType="string" resultType="com.example.domain.BookingDTO">
+    <select id="getbooking" parameterType="string" resultType="com.example.domain.BookingDTO">
         SELECT * FROM booking WHERE bo_num = #{bo_num}
     </select>
     

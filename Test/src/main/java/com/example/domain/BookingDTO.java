@@ -7,7 +7,7 @@ public class BookingDTO {
 
     private String bo_num;
     private String email_id;
-    private String ro_type;
+    private int ro_type;
     private int ac_id;
     private String checkin_day;
     private String checkout_day;

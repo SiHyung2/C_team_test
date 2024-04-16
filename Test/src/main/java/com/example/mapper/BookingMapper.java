@@ -10,7 +10,7 @@ public interface BookingMapper {
 	public BookingDTO getBooking(String bo_num);
 
     // 모든 예약 정보 조회
-    public List<BookingDTO> getAllbooking();
+    public List<BookingDTO> getAllBooking();
 
     // 예약 추가
     public void addBooking(BookingDTO booking);
