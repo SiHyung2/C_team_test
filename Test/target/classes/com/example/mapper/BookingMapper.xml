@@ -6,25 +6,25 @@
 <mapper namespace="com.example.mapper.BookingMapper">
     
     <select id="getBooking" parameterType="string" resultType="com.example.domain.BookingDTO">
-        SELECT * FROM bookings WHERE bo_num = #{bo_num}
+        SELECT * FROM booking WHERE bo_num = #{bo_num}
     </select>
     
-    <select id="getAllBookings" resultType="com.example.domain.BookingDTO">
-        SELECT * FROM bookings
+    <select id="getAllbooking" resultType="com.example.domain.BookingDTO">
+        SELECT * FROM booking
     </select>
     
     <insert id="addBooking" parameterType="com.example.domain.BookingDTO">
-        INSERT INTO bookings (bo_num, email_id, ro_num, ac_id, checkin_day, checkout_day, status, payment_code, reg_date)
-        VALUES (#{bo_num}, #{email_id}, #{ro_num}, #{ac_id}, #{checkin_day}, #{checkout_day}, #{status}, #{payment_code}, #{reg_date})
+        INSERT INTO booking (bo_num, email_id, ro_type, ac_id, checkin_day, checkout_day, status, payment_code, reg_date)
+        VALUES (#{bo_num}, #{email_id}, #{ro_type}, #{ac_id}, #{checkin_day}, #{checkout_day}, #{status}, #{payment_code}, #{reg_date})
     </insert>
     
     <update id="updateBooking" parameterType="com.example.domain.BookingDTO">
-        UPDATE bookings SET email_id = #{email_id}, ro_num = #{ro_num}, ac_id = #{ac_id}, 
+        UPDATE booking SET email_id = #{email_id}, ro_type = #{ro_type}, ac_id = #{ac_id}, 
         checkin_day = #{checkin_day}, checkout_day = #{checkout_day}, status = #{status}, 
         payment_code = #{payment_code}, reg_date = #{reg_date} WHERE bo_num = #{bo_num}
     </update> 
     
     <delete id="deleteBooking" parameterType="string">
-        DELETE FROM bookings WHERE bo_num = #{bo_num}
+        DELETE FROM booking WHERE bo_num = #{bo_num}
     </delete> 
 </mapper>
