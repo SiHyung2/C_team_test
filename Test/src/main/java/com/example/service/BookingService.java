@@ -13,5 +13,5 @@ public interface BookingService {
 
 	public void deleteBooking(String bo_num);
 
-	public List<BookingDTO> getAllBooking();
+	public List<BookingDTO> getAllBooking(); 
 }
