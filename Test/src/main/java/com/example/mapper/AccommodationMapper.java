@@ -11,4 +11,8 @@ public interface AccommodationMapper {
 	public void updateaccommdation(AccommodationDTO accommdation);
 	public void deleteaccommdation(AccommodationDTO accommdation);
 	
+	public List<AccommodationDTO> searchByac_id(AccommodationDTO accommodation);
+	public List<AccommodationDTO> searchListByTitleAndDateRange(AccommodationDTO accommdation);
+	public List<AccommodationDTO> searchByac_type(AccommodationDTO accommdation);
+	
 }

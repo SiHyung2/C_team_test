@@ -1,7 +1,7 @@
 package com.example.service;
 
-import static org.junit.Assert.assertNotNull;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.example.domain.BoardVO;
-import com.example.domain.Criteria;
 import com.example.domain.RoomDTO;
 
 import lombok.Setter;
@@ -25,46 +23,53 @@ public class RoomServicetest {
 	private RoomService service;
 
 //	@Test
-	public void testExist() {
-		log.info(service);
-		assertNotNull(service);
-	}
-	
-//	@Test
-	public void testReister() {
-		RoomDTO room=new RoomDTO();
-		room.setAc_id("asdf");
-		
-		service.register(board);
-		
-//		log.info("생성된 게시물의 번호: "+board.getBno());
-	}
-	
-	@Test
 	public void testGetList() {
-		service.getList(new Criteria(2, 10)).forEach(board -> log.info(board));
+        List<RoomDTO> list = service.getList();
+        list.forEach(room -> log.info(room));
+    }
+	
+//	@Test
+    public void testInsertRoom() {
+    	RoomDTO room=new RoomDTO();
+		room.setRo_type(4);
+		room.setAc_id("asd123");
+		room.setRo_name("스탠다드");
+		room.setRo_basic_count(2);
+		room.setRo_max_count(4);
+		room.setRo_info("삽입 테스트2");
+		room.setRo_count(10);
 		
-	}
-	
-//	@Test
-	public void testGet() {
-		log.info(service.get(1L));
-	}
-	
-//	@Test
-	public void testDelete() {
-		log.info("REMOVE RESULT: "+service.remove(2L));
-	}
-	
-//	@Test
-	public void testUpdate() {
-		BoardVO board=service.get(1L);
-		if(board==null) {
-			return;
-		}
 		
-		board.setTitle("제목 수정합니다.");
-		log.info("MODIFY RESULT: "+service.modify(board));
+		service.insertroom(room);
+		
+		log.info(room);
+	}
+	
+	
+//  @Test
+  public void testUpdateRoom() {
+  	RoomDTO room=new RoomDTO();
+  	room.setRo_type(3);
+		room.setAc_id("asd123");
+		room.setRo_name("스탠다드_수정_서비스2");
+		room.setRo_basic_count(2);
+		room.setRo_max_count(4);
+		room.setRo_info("수정 테스트22222");
+		room.setRo_count(10);
+		
+		service.updateroom(room);
+		
+		log.info(room);
+	}
+  
+  @Test
+  public void testDeleteRoom() {
+  	RoomDTO room=new RoomDTO();
+		room.setRo_type(4);
+		
+		service.deleteroom(room);
+		
+		log.info(room);
 	}
 	
 }

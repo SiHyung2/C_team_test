@@ -81,14 +81,24 @@ public class AccommodationMapperTest {
 		log.info(accommodation);
 	}
 	
-	@Test
+//	@Test
 	public void testdeleteAccommodation() {
 		AccommodationDTO accommodation=new AccommodationDTO();
-	  	accommodation.setAc_id(3);
+	  	accommodation.setAc_id(4);
 		
 		
-		mapper.updateaccommdation(accommodation);
+		mapper.deleteaccommdation(accommodation);
 		
 		log.info(accommodation);
+	}
+	
+	@Test
+	public void testsearchByac_id() {
+		AccommodationDTO accommodation=new AccommodationDTO();
+		accommodation.
+		mapper.searchByac_id(accommodation);
+		
+		log.info(accommodation);
+		
 	}
 }

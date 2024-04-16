@@ -20,25 +20,23 @@ public class RoomServicelmpl implements RoomService {
 	@Override
 	public List<RoomDTO> getList() {
 		mapper.getList();
-		
 		return null;
 	}
 
 	@Override
 	public void insertroom(RoomDTO room) {
-//		mapper.insertroom(room);		
+		mapper.insertroom(room);		
 	}
 
 	@Override
 	public void updateroom(RoomDTO room) {
-//		log.info("modify......"+room);
-//		mapper.updateroom(room);
+		mapper.updateroom(room);
 		
 	}
 
 	@Override
 	public void deleteroom(RoomDTO room) {
-//		mapper.deleteroom(room);
+		mapper.deleteroom(room);
 		
 	}
 
