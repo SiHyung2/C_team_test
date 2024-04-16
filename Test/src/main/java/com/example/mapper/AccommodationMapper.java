@@ -8,7 +8,7 @@ public interface AccommodationMapper {
 	
 	public List<AccommodationDTO> getList();
 	public void insertaccommdation(AccommodationDTO accommdation);
-//	public void updateaccommdation(AccommodationDTO accommdation);
-//	public void deleteaccommdation(AccommodationDTO accommdation);
+	public void updateaccommdation(AccommodationDTO accommdation);
+	public void deleteaccommdation(AccommodationDTO accommdation);
 	
 }

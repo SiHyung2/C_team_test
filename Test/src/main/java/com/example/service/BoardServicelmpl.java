@@ -6,8 +6,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.domain.BoardVO;
-import com.example.domain.Criteria;
 import com.example.mapper.BoardMapper;
 
 import lombok.AllArgsConstructor;

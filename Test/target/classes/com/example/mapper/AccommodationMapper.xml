@@ -17,14 +17,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			(#{ac_id}, #{email_id}, #{ac_title}, #{ac_type}, #{ac_address}, #{ac_info}, #{checkin}, #{checkout}, #{bu_name})
  	</insert>
 
-<!-- 	<update id="updateaccommdation"> -->
-<!-- 		update -->
-<!--  		set -->
-<!--  		where -->
-<!--  	</update> -->
+	<update id="updateaccommdation">
+		update 
+			accommodation
+ 		set 
+ 			email_id=#{email_id}, ac_title=#{ac_title}, ac_type=#{ac_type}, 
+ 			ac_address=#{ac_address}, ac_info=#{ac_info}, checkin=#{checkin}, checkout=#{checkout}
+ 		where 
+ 			ac_id=#{ac_id}
+ 	</update>
 	
 	
-<!-- 	<delete id="deleteaccommdation"> -->
-<!-- 		delete where  -->
-<!--  	</delete> -->
+	<delete id="deleteaccommdation">
+		delete accommodation where ac_id=#{ac_id}
+ 	</delete>
 </mapper>

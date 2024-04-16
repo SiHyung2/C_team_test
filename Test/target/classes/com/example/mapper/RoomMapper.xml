@@ -7,15 +7,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
  
  	<select id="getList" resultType="com.example.domain.RoomDTO">
- 		select*from room where ro_num>0
+ 		select*from room where ro_type>0
  	</select>
  	
 	<!-- 객실 등록 -->
  	<insert id="insertroom">
 		INSERT INTO 
-			room (ro_num, ac_id, ro_name, ro_basic_count, ro_max_count, ro_info)
+			room (ro_type, ac_id, ro_name, ro_basic_count, ro_max_count, ro_info, ro_count)
 		VALUES 
-			(#{ro_num}, #{ac_id}, #{ro_name}, #{ro_basic_count}, #{ro_max_count}, #{ro_info})
+			(#{ro_type}, #{ac_id}, #{ro_name}, #{ro_basic_count}, #{ro_max_count}, #{ro_info}, #{ro_count})
  	</insert>
  	
 
@@ -24,13 +24,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			room
  		set
  			ac_id=#{ac_id}, ro_name=#{ro_name}, ro_basic_count=#{ro_basic_count}, 
- 			ro_max_count=#{ro_max_count}, ro_info=#{ro_info}
+ 			ro_max_count=#{ro_max_count}, ro_info=#{ro_info}, ro_count=#{ro_count}
  		where
- 			ro_num=#{ro_num}
+ 			ro_type=#{ro_type}
  	</update>
 	
 	
 	<delete id="deleteroom">
-		delete room where ro_num=#{ro_num}
+		delete room where ro_type=#{ro_type}
  	</delete>
  </mapper>

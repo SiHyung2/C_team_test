@@ -20,7 +20,7 @@ public class RoomMapperTest {
     @Autowired
     private RoomMapper mapper;
 
-    @Test
+//    @Test
     public void testGetList() {
         List<RoomDTO> list = mapper.getList();
         list.forEach(room -> log.info(room));
@@ -29,12 +29,13 @@ public class RoomMapperTest {
 //    @Test
     public void testInsertRoom() {
     	RoomDTO room=new RoomDTO();
-		room.setRo_num(4);
+		room.setRo_type(2);
 		room.setAc_id("asd123");
 		room.setRo_name("스탠다드");
 		room.setRo_basic_count(2);
 		room.setRo_max_count(4);
 		room.setRo_info("삽입 테스트2");
+		room.setRo_count(10);
 		
 		
 		mapper.insertroom(room);
@@ -42,16 +43,16 @@ public class RoomMapperTest {
 		log.info(room);
 	}
     
-//    @Test
+    @Test
     public void testUpdateRoom() {
     	RoomDTO room=new RoomDTO();
-		room.setRo_num(3);
+    	room.setRo_type(2);
 		room.setAc_id("asd123");
 		room.setRo_name("스탠다드_수정");
 		room.setRo_basic_count(2);
 		room.setRo_max_count(4);
 		room.setRo_info("수정 테스트2");
-		
+		room.setRo_count(10);
 		
 		mapper.updateroom(room);
 		
@@ -61,7 +62,7 @@ public class RoomMapperTest {
 //    @Test
     public void testDeleteRoom() {
     	RoomDTO room=new RoomDTO();
-		room.setRo_num(2);
+		room.setRo_type(2);
 		
 		mapper.deleteroom(room);
 		

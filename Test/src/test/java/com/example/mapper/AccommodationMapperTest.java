@@ -55,4 +55,40 @@ public class AccommodationMapperTest {
 		log.info(accommodation);
 	}
  
+//  @Test
+	public void testupdateAccommodation() {
+		AccommodationDTO accommodation=new AccommodationDTO();
+  	
+	  	Date day1 = new Date(System.currentTimeMillis());
+	  	
+	  	Date day2 = new Date(System.currentTimeMillis());
+	  	
+	  	
+	  	
+	  	accommodation.setAc_id(2);
+	  	accommodation.setEmail_id("testemail");
+	  	accommodation.setAc_title("변경된 방제1");
+	  	accommodation.setAc_type(2);
+	  	accommodation.setAc_address("변경된주소1");
+	  	accommodation.setAc_info("변경된 숙소 소개1");
+	  	accommodation.setCheckin(day1);
+	  	accommodation.setCheckout(day2);
+	  	accommodation.setBu_name("사업자 이름");
+		
+		
+		mapper.updateaccommdation(accommodation);
+		
+		log.info(accommodation);
+	}
+	
+	@Test
+	public void testdeleteAccommodation() {
+		AccommodationDTO accommodation=new AccommodationDTO();
+	  	accommodation.setAc_id(3);
+		
+		
+		mapper.updateaccommdation(accommodation);
+		
+		log.info(accommodation);
+	}
 }
