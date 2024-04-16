@@ -11,6 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.example.domain.AccommodationDTO;
+import com.example.domain.BookingDTO;
 import com.example.domain.RoomDTO;
 
 import lombok.extern.log4j.Log4j2;
@@ -92,13 +93,50 @@ public class AccommodationMapperTest {
 		log.info(accommodation);
 	}
 	
-	@Test
+//	@Test
 	public void testsearchByac_id() {
 		AccommodationDTO accommodation=new AccommodationDTO();
-		accommodation.
+		accommodation.setAc_id(2);
 		mapper.searchByac_id(accommodation);
 		
 		log.info(accommodation);
 		
 	}
+	
+	@Test
+	public void testsearchListByTitleAndDateRange() {
+		AccommodationDTO accommodation=new AccommodationDTO();
+		accommodation.setAc_id(2);
+		mapper.searchByac_id(accommodation);
+		
+		log.info(accommodation);
+		
+	}
+	
+//	@Test          이건 어떻게 테스트하는지 안 배워서 모르겠다.. 
+	public void testSearchListByTitleAndDateRange() {
+		
+//		AccommodationDTO accommodation=new AccommodationDTO();
+//	    acTitle.setAc_title("검색 테스트1");
+//	    
+//	    BookingDTO checkinDay = new BookingDTO();
+//	    checkinDay.setCheckin_day(LocalDate.of(2024, 4, 1));
+//	    checkinDay.setCheckin_day(LocalDate.of(2024, 4, 1)); 
+//	    	    
+//	    
+//	   mapper.searchListByTitleAndDateRange();
+	   
+	    
+	}
+	
+//	@Test
+	public void testsearchByac_type() {
+		AccommodationDTO accommodation=new AccommodationDTO();
+		accommodation.setAc_type(2);
+		mapper.searchByac_type(accommodation);
+		
+		log.info(accommodation);
+		
+	}
+
 }

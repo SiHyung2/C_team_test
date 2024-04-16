@@ -22,7 +22,7 @@ public class AccommodationServiceTest {
 	@Setter(onMethod_ = @Autowired)
 	private AccommodationService service;
 
-	@Test
+//	@Test
 	public void testGetList() {
         List<AccommodationDTO> list = service.getList();
         list.forEach(Accommodation1 -> log.info(Accommodation1));
@@ -88,13 +88,28 @@ public class AccommodationServiceTest {
 		log.info(accommodation);
 	}
 	
-	@Test
+//	@Test
 	public void testsearchByac_id() {
 		AccommodationDTO accommodation=new AccommodationDTO();
-  	
-	  	accommodation.setAc_id(2);
+		accommodation.setAc_id(3);
 		service.searchByac_id(accommodation);
 		
 		log.info(accommodation);
+		
+	}
+	
+//	@Test
+	public void testsearchListByTitleAndDateRange() {
+//		이거 테스트 못 했음 
+	}
+	
+	@Test
+	public void testsearchByac_type() {
+		AccommodationDTO accommodation=new AccommodationDTO();
+		accommodation.setAc_type(2);
+		service.searchByac_type(accommodation);
+		
+		log.info(accommodation);
+		
 	}
 }

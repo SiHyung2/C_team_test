@@ -11,8 +11,8 @@ public interface AccommodationService {
 	public void updateaccommdation(AccommodationDTO accommdation);
 	public void deleteaccommdation(AccommodationDTO accommdation);
 	
-	public void searchByac_id(AccommodationDTO accommdation);
-	public void searchListByTitleAndDateRange(AccommodationDTO accommdation);
-	public void searchByac_type(AccommodationDTO accommdation);
+	public List<AccommodationDTO> searchByac_id(AccommodationDTO accommdation);
+	public List<AccommodationDTO> searchListByTitleAndDateRange(AccommodationDTO accommdation);
+	public List<AccommodationDTO> searchByac_type(AccommodationDTO accommdation);
 	
 }

@@ -42,20 +42,22 @@ public class AccommodationServiceImpl implements AccommodationService {
 	}
 
 	@Override
-	public void searchByac_id(AccommodationDTO accommdation) {
+	public List<AccommodationDTO> searchByac_id(AccommodationDTO accommdation) {
 		mapper.searchByac_id(accommdation);
-		
+		return null;
 	}
 
 	@Override
-	public void searchListByTitleAndDateRange(AccommodationDTO accommdation) {
-		mapper.searchListByTitleAndDateRange(accommdation);
-		
+	public List<AccommodationDTO> searchListByTitleAndDateRange(AccommodationDTO accommdation) {
+//		mapper.searchListByTitleAndDateRange(accommdation);
+		return null;
 	}
 
 	@Override
-	public void searchByac_type(AccommodationDTO accommdation) {
+	public List<AccommodationDTO> searchByac_type(AccommodationDTO accommdation) {
 		mapper.searchByac_type(accommdation);
+		
+		return null;
 		
 	}
 
