@@ -36,9 +36,9 @@ public class RootConfig {
 	    hikariConfig.setPassword("c##project");
 
 	    HikariDataSource dataSource = new HikariDataSource(hikariConfig);
-
+ 
 	    return dataSource;
-	  }
+	  } 
 	 
 	 @Bean
 	 public SqlSessionFactory sqlSessionFactory() throws Exception{
