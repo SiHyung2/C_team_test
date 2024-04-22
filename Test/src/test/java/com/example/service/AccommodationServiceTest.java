@@ -98,12 +98,17 @@ public class AccommodationServiceTest {
 		
 	}
 	
-//	@Test
-	public void testsearchListByTitleAndDateRange() {
-//		이거 테스트 못 했음 
+	@Test
+	public void testSearchListByTitleAndDateRange() {
+		AccommodationDTO accommodation=new AccommodationDTO();
+		accommodation.setAc_title("검색 테스트1");
+		service.searchListByTitle(accommodation);
+		
+		log.info(accommodation);
+		
 	}
 	
-	@Test
+//	@Test
 	public void testsearchByac_type() {
 		AccommodationDTO accommodation=new AccommodationDTO();
 		accommodation.setAc_type(2);

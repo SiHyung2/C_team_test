@@ -12,7 +12,7 @@ public interface AccommodationService {
 	public void deleteaccommdation(AccommodationDTO accommdation);
 	
 	public List<AccommodationDTO> searchByac_id(AccommodationDTO accommdation);
-	public List<AccommodationDTO> searchListByTitleAndDateRange(AccommodationDTO accommdation);
+	public List<AccommodationDTO> searchListByTitle(AccommodationDTO accommdation);
 	public List<AccommodationDTO> searchByac_type(AccommodationDTO accommdation);
 	
 }

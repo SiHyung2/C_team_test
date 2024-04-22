@@ -48,8 +48,8 @@ public class AccommodationServiceImpl implements AccommodationService {
 	}
 
 	@Override
-	public List<AccommodationDTO> searchListByTitleAndDateRange(AccommodationDTO accommdation) {
-//		mapper.searchListByTitleAndDateRange(accommdation);
+	public List<AccommodationDTO> searchListByTitle(AccommodationDTO accommdation) {
+		mapper.searchListByTitle(accommdation);
 		return null;
 	}
 

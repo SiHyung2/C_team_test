@@ -14,4 +14,6 @@ public class BookingDTO {
     private int status;
     private int payment_code;
     private String reg_date;
+    
 }
+
